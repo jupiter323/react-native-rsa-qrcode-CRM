@@ -4,10 +4,13 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "ios-bundle": "react-native bundle --dev false --entry-file index.js --bundle-output ios/main.jsbundle --platform ios",
+    "android-linux": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && react-native run-android"
   },
   "dependencies": {
     "hybrid-crypto-js": "^0.1.6",
+    "native-base": "^2.8.1",
     "react": "16.6.1",
     "react-native": "0.57.5",
     "react-native-camera": "^1.5.1",
