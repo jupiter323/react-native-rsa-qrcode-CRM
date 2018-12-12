@@ -1,5 +1,6 @@
 import { StackNavigator } from 'react-navigation';
 import ScanScreen from './src/modules/QRSacnModule/ScanScreen';
+import PreScanScreen from './src/modules/ScanBeforemodule';
 import { LoginForm, FirstScreen, SignupForm } from './src/modules/LoginModule'
 const AppNavigator = StackNavigator(
   {
@@ -19,6 +20,13 @@ const AppNavigator = StackNavigator(
     },
     Signup: {
       screen: SignupForm,
+      navigationOptions: {
+        header: null,
+        gesturesEnabled: false
+      }
+    },
+    PreScan: {
+      screen: PreScanScreen,
       navigationOptions: {
         header: null,
         gesturesEnabled: false

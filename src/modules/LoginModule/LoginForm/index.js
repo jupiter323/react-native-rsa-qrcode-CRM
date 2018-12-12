@@ -7,7 +7,7 @@ import styles from './style'
 import BG from 'assets/images/bg.png'
 export default class HomeScreen extends React.Component {
     login() {
-        this.props.navigation.navigate('Scan')
+        this.props.navigation.navigate('PreScan')
     }
     signup() {
         this.props.navigation.navigate('Signup')
